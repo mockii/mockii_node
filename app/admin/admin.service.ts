@@ -22,15 +22,6 @@ export class AdminService {
       .catch(this.handleError);
   }
 
-  updateTopic(topic: Topic): Promise<Topic> {
-    const url = `${this.baseServiceUrl}/${topic.topicId}`;
-    return this.http
-      .put(url, JSON.stringify(topic), {headers: this.headers})
-      .toPromise()
-      .then(() => topic)
-      .catch(this.handleError);
-  }
-
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
