@@ -1,1 +1,161 @@
-<h1>Mockii Dashboard</h1>
+<!--<h1>Mockii Dashboard</h1>-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <section class=section id=profile>
+                    <h1>Practice Interview with Experts & Get Hired!</h1>
+                    <br><br>
+                    <div class="section-wrapper container">
+                        <div class=section-content>
+                            <div class=row>
+                                <nav class="navbar navbar-default">
+                                    <div class="nav nav-justified navbar-nav">
+
+                                        <form class="navbar-form navbar-search" role="search">
+                                            <div class="input-group">
+
+                                                <input type="text" class="form-control">
+
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-search btn-danger">
+                                                        <span class="glyphicon glyphicon-search"></span>
+                                                        <span class="label-icon">{{searchLabel}}</span>
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger dropdown-toggle"
+                                                            data-toggle="dropdown">
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu pull-right" role="menu">
+                                                        <li *ngFor="let type of searchTypes" (click)="onSelectSearchType(type)"
+                                                            [class.selected]="type === selectedSearchType">
+                                                            <div class="searchType">
+                                                                <span class="{{type.searchClass}}"></span>
+                                                                <span class="label-icon">{{type.searchType}}</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Should there be some content going in here...</h3>
+                </section>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <span class="divider"></span>
+    <div class="row">
+        <div class="col-md-12"><br>
+            <section class="" id="">
+                <div class="col-md-6">
+                    <h3>Digital Interview Experience</h3>
+                    <br>
+                    <p class="text-muted text-left">We help to build confidence and prepare you to give best interview. Register and talk to the experts to discuss your interview experience and provide feedback to help you groom.<br>
+                        Also should there be some more content going in here.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3>To Register Sign Up / Sign In here.</h3>
+                    <br><br>
+                    <form role="form">
+                        <div style="display: inline-flex; width: 100%">
+                            <!--input type="text" placeholder="First Name" class="form-control" id="firstName" />
+                            <input type="text" placeholder="Last Name" class="form-control" id="lastName" />-->
+                            <div class="form-group" style="width: 100%">
+                                <input type="text" placeholder="First Name" class="form-control" id="firstName" />
+                            </div>
+                            <div class="form-group" style="width: 100%">
+                                <input type="text" placeholder="Last Name" class="form-control" id="lastName" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Username" class="form-control" id="username" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" class="form-control" id="password" />
+                        </div>
+                        <!--<div class="form-group">
+
+                            <label for="exampleInputFile">
+                                File input
+                            </label>
+                            <input type="file" id="exampleInputFile" />
+                            <p class="help-block">
+                                Example block-level help text here.
+                            </p>
+                        </div>
+                        <div class="checkbox">
+
+                            <label>
+                                <input type="checkbox" /> Check me out
+                            </label>
+                        </div>-->
+                        <div>
+                            <button type="submit" class="btn btn-default">
+                                Sign In
+                            </button>
+                            <button type="submit" class="btn btn-default">
+                                Sign Up
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <br><br>
+    <span class="divider"></span>
+    <div class="row" style="display: inline-flex">
+        <div class="col-md-4">
+            <p>
+                ICON
+            </p><br>
+            <h4>
+                Get Interviewed or Take Interview Anywhere, Anytime
+            </h4><br>
+            <p>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </p>
+            <p>
+                <a class="btn" href="#">View details »</a>
+            </p>
+        </div>
+        <span class="divider" style="height: 300px; width: 1px; background-image: linear-gradient(to bottom, #ffffff -10%, #666096 50%, #ffffff 110%);"></span>
+        <div class="col-md-4" style="margin-left: 10px">
+            <p>
+                ICON
+            </p><br>
+            <h4>
+                Novice to Expert
+            </h4><br>
+            <p>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </p>
+            <p>
+                <a class="btn" href="#">View details »</a>
+            </p>
+        </div>
+        <span class="divider" style="height: 300px; width: 1px; background-image: linear-gradient(to bottom, #ffffff -10%, #666096 50%, #ffffff 110%);"></span>
+        <div class="col-md-4" style="margin-left: 10px">
+            <p>
+                ICON
+            </p>
+            <h4>
+                Reasons to be Mockii'ed
+            </h4><br>
+            <p>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </p>
+            <p>
+                <a class="btn" href="#">View details »</a>
+            </p>
+        </div>
+    </div>
+</div>

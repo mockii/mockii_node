@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Neuropol;
+    src: /*local("Helvetica Neue Bold"),
+    local("HelveticaNeue-Bold"),*/
+    url(../assets/fonts/neuropol.ttf);
+    /*font-weight: bold;*/
+}@font-face {
+    font-family: RawengulkSans;
+    src: /*local("Helvetica Neue Bold"),
+    local("HelveticaNeue-Bold"),*/
+    url(../assets/fonts/RawengulkSans-094.ttf);
+    /*font-weight: bold;*/
+}
+
+.searchType {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333;
+    white-space: nowrap;
+    cursor: default;
+    text-decoration: none;
+}
+
+button {
+    background-color: #5f5c5c;
+    border-color: #5f5c5c;
+    color: white;
+}
+
+button:hover {
+    background: #5f5c5c;
+    border-color: #5f5c5c;
+}
+
+button:active:focus {
+    background: #5f5c5c;
+    border-color: #5f5c5c;
+}
+
+button:focus {
+    background: #5f5c5c;
+    border-color: #5f5c5c;
+}
+
+h1 {
+    /*font-family: cursive;*/
+    font-family: RawengulkSans;
+}
+
+h3, h4 {
+   /*font-family: neuropol;*/
+   font-family: RawengulkSans;
+}
+
+span.divider {
+    margin-top: 3.5rem;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjNTk1MzhkIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #666096), color-stop(50%, #ffffff), color-stop(100%, #666096));
+    background-image: -webkit-linear-gradient(left, #666096 0%, #ffffff 50%, #666096 100%);
+    background-image: -webkit-linear-gradient(left, #666096 0%, #ffffff 50%, #666096 100%);
+    /*background-image: linear-gradient(to right, #666096 0%, #ffffff 50%, #666096 100%);*/
+    background-image: linear-gradient(to right, #ffffff -10%, #666096 50%, #ffffff 110%);
+    border: none;
+    height: 1px;
+    display: block;
+    margin: 35px 0px;
+}
+
+span.divider.center {
+    margin-right: auto;
+    margin-left: auto;
+}
