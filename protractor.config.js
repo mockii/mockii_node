@@ -16,6 +16,7 @@ var _ = require('lodash');
 
 
 exports.config = {
+  allScriptsTimeout: 11000,
   directConnect: true,
 
   // Capabilities to be passed to the webdriver instance.
@@ -28,6 +29,9 @@ exports.config = {
 
   // Spec patterns are relative to this config file
   specs: ['**/*e2e-spec.js' ],
+    /*specs: [
+        './e2e/!**!/!*.e2e-spec.ts'
+    ],*/
 
 
   // For angular tests
@@ -39,15 +43,23 @@ exports.config = {
   // doesn't seem to work.
   // resultJsonOutputFile: "foo.json",
 
+  useAllAngular2AppRoots: true,
+  beforeLaunch: function() {
+      require('ts-node').register({
+          project: 'e2e'
+      });
+  },
+
   onPrepare: function() {
     //// SpecReporter
-    //var SpecReporter = require('jasmine-spec-reporter');
+    var SpecReporter = require('jasmine-spec-reporter');
     //jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'none'}));
     //// jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'all'}));
 
     // debugging
     // console.log('browser.params:' + JSON.stringify(browser.params));
-    jasmine.getEnv().addReporter(new Reporter( browser.params )) ;
+    // jasmine.getEnv().addReporter(new Reporter( browser.params )) ;
+    jasmine.getEnv().addReporter(SpecReporter) ;
 
     // Allow changing bootstrap mode to NG1 for upgrade tests
     global.setProtractorToNg1Mode = function() {
@@ -60,6 +72,7 @@ exports.config = {
     // defaultTimeoutInterval: 60000,
     defaultTimeoutInterval: 10000,
     showTiming: true,
+    showColors: true,
     print: function() {}
   }
 };
