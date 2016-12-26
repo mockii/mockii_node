@@ -10,12 +10,13 @@ import {SearchType} from "../model/SearchType";
   templateUrl: 'dashboard.component.html',
   styleUrls: ['dashboard.component.css']
 })
-export class DashboardComponent {
-    searchLabel: String = 'Search';
+export class DashboardComponent implements OnInit{
+    searchLabel: String;
     searchTypes: SearchType[];
     selectedSearchType: SearchType;
 
     ngOnInit():void {
+        this.searchLabel = 'Search';
         this.getSearchTypes();
     }
 
