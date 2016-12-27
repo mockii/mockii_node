@@ -1,5 +1,5 @@
 <!--<h1>Mockii Dashboard</h1>-->
-<div class="container-fluid">
+<div class="container-fluid" style="padding-top: 100px">
     <div class="row">
         <div class="col-md-12">
             <div class="jumbotron">
@@ -27,7 +27,8 @@
                                                         <span class="caret"></span>
                                                     </button>
                                                     <ul class="dropdown-menu pull-right" role="menu">
-                                                        <li *ngFor="let type of searchTypes" (click)="onSelectSearchType(type)"
+                                                        <li *ngFor="let type of searchTypes"
+                                                            (click)="onSelectSearchType(type)"
                                                             [class.selected]="type === selectedSearchType">
                                                             <div class="searchType">
                                                                 <span class="{{type.searchClass}}"></span>
@@ -50,64 +51,68 @@
     </div>
     <br><br>
     <span class="divider"></span>
-    <div class="row">
-        <div class="col-md-12"><br>
-            <section class="" id="">
-                <div class="col-md-6">
-                    <h3>Digital Interview Experience</h3>
-                    <br>
-                    <p class="text-muted text-left">We help to build confidence and prepare you to give best interview. Register and talk to the experts to discuss your interview experience and provide feedback to help you groom.<br>
-                        Also should there be some more content going in here.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <h3>To Register Sign Up / Sign In here.</h3>
-                    <br><br>
-                    <form role="form">
-                        <div style="display: inline-flex; width: 100%">
-                            <!--input type="text" placeholder="First Name" class="form-control" id="firstName" />
-                            <input type="text" placeholder="Last Name" class="form-control" id="lastName" />-->
-                            <div class="form-group" style="width: 100%">
-                                <input type="text" placeholder="First Name" class="form-control" id="firstName" />
-                            </div>
-                            <div class="form-group" style="width: 100%">
-                                <input type="text" placeholder="Last Name" class="form-control" id="lastName" />
-                            </div>
+    <div class="row" style="display: inline-flex">
+        <div class="col-md-12" style="display: inline-flex"><br>
+            <!--<section class="" id="">-->
+            <div class="col-md-6">
+                <h3>Digital Interview Experience</h3>
+                <br>
+                <p class="text-muted text-left">We help to build confidence and prepare you to give best interview.
+                    Register and talk to the experts to discuss your interview experience and provide feedback to
+                    help you groom.<br>
+                    Also should there be some more content going in here.
+                </p>
+            </div>
+            <span class="divider"
+                  style="height: 300px; width: 1px; background-image: linear-gradient(to bottom, #ffffff -10%, #666096 50%, #ffffff 110%);"></span>
+            <div class="col-md-6" style="margin-left: 10px">
+                <h3>To Register Sign Up / Sign In here.</h3>
+                <br><br>
+                <form role="form">
+                    <div style="display: inline-flex; width: 100%">
+                        <!--input type="text" placeholder="First Name" class="form-control" id="firstName" />
+                        <input type="text" placeholder="Last Name" class="form-control" id="lastName" />-->
+                        <div class="form-group" style="width: 100%">
+                            <input type="text" placeholder="First Name" class="form-control" id="firstName"/>
                         </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Username" class="form-control" id="username" />
+                        <div class="form-group" style="width: 100%">
+                            <input type="text" placeholder="Last Name" class="form-control" id="lastName"/>
                         </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control" id="password" />
-                        </div>
-                        <!--<div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Username" class="form-control" id="username"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control" id="password"/>
+                    </div>
+                    <!--<div class="form-group">
 
-                            <label for="exampleInputFile">
-                                File input
-                            </label>
-                            <input type="file" id="exampleInputFile" />
-                            <p class="help-block">
-                                Example block-level help text here.
-                            </p>
-                        </div>
-                        <div class="checkbox">
+                        <label for="exampleInputFile">
+                            File input
+                        </label>
+                        <input type="file" id="exampleInputFile" />
+                        <p class="help-block">
+                            Example block-level help text here.
+                        </p>
+                    </div>
+                    <div class="checkbox">
 
-                            <label>
-                                <input type="checkbox" /> Check me out
-                            </label>
-                        </div>-->
-                        <div>
-                            <button type="submit" class="btn btn-default">
-                                Sign In
-                            </button>
-                            <button type="submit" class="btn btn-default" (click)="open(content)">
-                                Sign Up
-                            </button>
-                        </div>
+                        <label>
+                            <input type="checkbox" /> Check me out
+                        </label>
+                    </div>-->
+                    <div>
+                        <button type="submit" class="btn btn-default">
+                            Sign In
+                        </button>
+                        <button type="submit" class="btn btn-default">
+                            Sign Up
+                        </button>
+                    </div>
 
-                    </form>
-                </div>
-            </section>
+                </form>
+            </div>
+            <!--</section>-->
         </div>
     </div>
     <br><br>
@@ -121,13 +126,16 @@
                 Get Interviewed or Take Interview Anywhere, Anytime
             </h4><br>
             <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                euismod. Donec sed odio dui.
             </p>
             <p>
                 <a class="btn" href="#">View details »</a>
             </p>
         </div>
-        <span class="divider" style="height: 300px; width: 1px; background-image: linear-gradient(to bottom, #ffffff -10%, #666096 50%, #ffffff 110%);"></span>
+        <span class="divider"
+              style="height: 300px; width: 1px; background-image: linear-gradient(to bottom, #ffffff -10%, #666096 50%, #ffffff 110%);"></span>
         <div class="col-md-4" style="margin-left: 10px">
             <p>
                 ICON
@@ -136,13 +144,16 @@
                 Novice to Expert
             </h4><br>
             <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                euismod. Donec sed odio dui.
             </p>
             <p>
                 <a class="btn" href="#">View details »</a>
             </p>
         </div>
-        <span class="divider" style="height: 300px; width: 1px; background-image: linear-gradient(to bottom, #ffffff -10%, #666096 50%, #ffffff 110%);"></span>
+        <span class="divider"
+              style="height: 300px; width: 1px; background-image: linear-gradient(to bottom, #ffffff -10%, #666096 50%, #ffffff 110%);"></span>
         <div class="col-md-4" style="margin-left: 10px">
             <p>
                 ICON
@@ -151,43 +162,380 @@
                 Reasons to be Mockii'ed
             </h4><br>
             <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                euismod. Donec sed odio dui.
             </p>
             <p>
                 <a class="btn" href="#">View details »</a>
             </p>
         </div>
     </div>
-</div>
+    <br><br>
+    <span class="divider"></span>
+    <h3 style="text-align: center">Here is what our interviewer's say ...</h3>
+    <p>Testimonials of some top user's with a Carousel</p>
+    <!--<div class="row">
+        <div class="col-md-12"><br>
+            &lt;!&ndash;<section class="" id="">&ndash;&gt;
+            <h3>What our Customers are saying ...</h3>
+            <br>
+            &lt;!&ndash;<p class="text-muted text-left">
+                We help to build confidence and prepare you to give best interview. Register and talk to the experts to discuss your interview experience and provide feedback to help you groom.<br>
+                Also should there be some more content going in here.
+            </p>
+            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
+            <blockquote>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                </p> <small>Someone famous <cite>Source Title</cite></small>
+            </blockquote>&ndash;&gt;
 
-<template #content let-c="close" let-d="dismiss">
-  <div class="modal-header">
-    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <h4 class="modal-title">User Registration Form</h4>
-  </div>
-  <div class="modal-body">
-    <form>
-      <div class="form-group">
-        <input type="text" class="form-control" [(ngModel)]="userProfile.firstName" placeholder="First Name" name="firstName">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" [(ngModel)]="userProfile.lastName" placeholder="Last Name" name="lastName">
-      </div>
-      <div class="form-group">
-        <input type="email" class="form-control" [(ngModel)]="userProfile.emailId" placeholder="Email Address" name="emailId">
-      </div>
-      <div class="form-group">
-        <input type="tel" class="form-control" [(ngModel)]="userProfile.phoneNumber" placeholder="Phone Number" name="phoneNumber">
-      </div>
-      <div class="form-group">
-        <input type="date" class="form-control" [(ngModel)]="userProfile.dob" placeholder="Phone Number" name="dob">
-      </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="c('Submit click')">Submit</button>
-    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-  </div>
-</template>
+            &lt;!&ndash;<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox" style="width: 100%">
+                    <div class="carousel-item active">
+                        <img src="http://lorempixel.com/output/sports-q-c-1600-500-1.jpg"  style="width: 100%" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="http://lorempixel.com/output/sports-q-c-1600-500-2.jpg"  style="width: 100%" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg"  style="width: 100%" alt="Third slide">
+                    </div>
+                </div>
+            </div>&ndash;&gt;
+            <div class="col-md-6">
+                <div class="owl-carousel content-slider owl-theme" style="opacity: 1; display: block;">
+                    <div class="owl-wrapper-outer">
+                        <div class="owl-wrapper"
+                             style="width: 2220px; left: 0px; display: block; transition: all 1000ms ease; transform: translate3d(0px, 0px, 0px);">
+                            <div class="owl-item" style="width: 555px;">
+                                <div class="testimonial text-center">
+                                    <div class="testimonial-image">
+                                        <img src="images/testimonial-1.jpg" alt="Jane Doe" title="Jane Doe"
+                                             class="img-circle">
+                                    </div>
+                                    <h3>Just Perfect!</h3>
+                                    <div class="separator"></div>
+                                    <div class="testimonial-body">
+                                        <blockquote>
+                                            <p>Sed ut perspiciatis unde omnis iste natu error sit voluptatem accusan
+                                                tium dolore laud antium, totam rem dolor sit amet tristique pulvinar,
+                                                turpis arcu rutrum nunc, ac laoreet turpis augue a justo.</p>
+                                        </blockquote>
+                                        <div class="testimonial-info-1">- Jane Doe</div>
+                                        <div class="testimonial-info-2">By Company</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 555px;">
+                                <div class="testimonial text-center">
+                                    <div class="testimonial-image">
+                                        <img src="images/testimonial-2.jpg" alt="Jane Doe" title="Jane Doe"
+                                             class="img-circle">
+                                    </div>
+                                    <h3>Amazing!</h3>
+                                    <div class="separator"></div>
+                                    <div class="testimonial-body">
+                                        <blockquote>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et cupiditate
+                                                deleniti ratione in. Expedita nemo, quisquam, fuga adipisci omnis ad
+                                                mollitia libero culpa nostrum est quia eos esse vel!</p>
+                                        </blockquote>
+                                        <div class="testimonial-info-1">- Jane Doe</div>
+                                        <div class="testimonial-info-2">By Company</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            &lt;!&ndash;</section>&ndash;&gt;
+        </div>
+    </div>-->
+    <div class="owl-carousel content-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="testimonial text-center">
+                        <div class="testimonial-image">
+                            <img src="images/testimonial-1.jpg" alt="Jane Doe" title="Jane Doe" class="img-circle">
+                        </div>
+                        <h3>Just Perfect!</h3>
+                        <div class="separator"></div>
+                        <div class="testimonial-body">
+                            <blockquote>
+                                <p>Sed ut perspiciatis unde omnis iste natu error sit voluptatem accusan tium dolore laud antium, totam rem dolor sit amet tristique pulvinar, turpis arcu rutrum nunc, ac laoreet turpis augue a justo.</p>
+                            </blockquote>
+                            <div class="testimonial-info-1">- Jane Doe</div>
+                            <div class="testimonial-info-2">By Company</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="testimonial text-center">
+                        <div class="testimonial-image">
+                            <img src="images/testimonial-2.jpg" alt="Jane Doe" title="Jane Doe" class="img-circle">
+                        </div>
+                        <h3>Amazing!</h3>
+                        <div class="separator"></div>
+                        <div class="testimonial-body">
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et cupiditate deleniti ratione in. Expedita nemo, quisquam, fuga adipisci omnis ad mollitia libero culpa nostrum est quia eos esse vel!</p>
+                            </blockquote>
+                            <div class="testimonial-info-1">- Jane Doe</div>
+                            <div class="testimonial-info-2">By Company</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <span class="divider"></span>
+    <h3 style="text-align: center">Client's who are in love with us ...</h3>
+    <p>Fade out all logos of all registered clients</p>
+    <!--<div class="row">
+        <div class="clients-container">
+            <div class="clients" style="display: inline-flex">
+                <div class="client-image object-non-visible animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="100">
+                    <a href="#"><img src="../assets/images/clients/client1.jpg" alt=""></a>
+                </div>
+                <div class="client-image object-non-visible animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="200">
+                    <a href="#"><img src="../assets/images/clients/client2.png" alt=""></a>
+                </div>
+                <div class="client-image object-non-visible animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="300">
+                    <a href="#"><img src="../assets/images/clients/client3.jpg" alt=""></a>
+                </div>
+                <div class="client-image object-non-visible animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="400">
+                    <a href="#"><img src="../assets/images/clients/client4.jpg" alt=""></a>
+                </div>
+                <div class="client-image object-non-visible animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="500">
+                    <a href="#"><img src="../assets/images/clients/client5.jpg" alt=""></a>
+                </div>
+                <div class="client-image object-non-visible animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="600">
+                    <a href="#"><img src="../assets/images/clients/clien6.jpg" alt=""></a>
+                </div>
+                <div class="client-image object-non-visible animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="700">
+                    <a href="#"><img src="../assets/images/clients/client7.jpg" alt=""></a>
+                </div>
+                <div class="client-image object-non-visible animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="800">
+                    <a href="#"><img src="../assets/images/clients/clien8.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <br><br>
+    <span class="divider"></span>
+    <h3 style="text-align: center">Get Interview'ed from the Best of the Best's ...</h3>
+    <p>Place a Carousel of top brass</p>
+    <!--<div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <h3 style="text-align: center">Get Interview'ed from the Best of the Best's</h3>
+                &lt;!&ndash;<div class="col-md-2">
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-2">
+                </div>&ndash;&gt;
+
+            </div>
+        </div>
+    </div>-->
+    <!--<div class="splash_panel alt_panel profs_panel log_visibility" data-log-visibility="professors">
+        <div class="container splash_ctr" id="professors">
+            <div class="row">
+                <h3 style="text-align: center">Get Interview'ed from the Best of the Best's</h3>
+                <div class="prof_brief col-md-3 col-sm-6">
+                    <a href="/professors#jennifer_schwartz" class="log_click thumbnail" data-log-click="prof_jennifer_schwartz">
+                        <span class="img-rounded prof_icon jennifer_schwartz_icon"></span>
+
+                        <div class="caption">
+                            <div class="name">Jennifer Schwartz</div>
+                            <div class="subject">Chemistry</div>
+                            <div class="quote">&ldquo;Many of the students who ask questions on Piazza just wouldn't get the opportunity to ask them otherwise.&rdquo;</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="prof_brief col-md-3 col-sm-6">
+                    <a href="/professors#ron_lee" class="thumbnail log_click" data-log-click="prof_ron_lee">
+                        <span class="img-rounded prof_icon ron_lee_icon"></span>
+
+                        <div class="caption">
+                            <div class="name">Ron Lee</div>
+                            <div class="subject">Economics</div>
+                            <div class="quote">&ldquo;I think it impoverishes the learning environment if students don't talk to other students. Piazza makes it very easy to get a discussion going.&rdquo;</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="prof_brief col-md-3 col-sm-6">
+                    <a href="/professors#slobodan_simic" class="thumbnail log_click" data-log-click="prof_slobodan_simic">
+                        <span class="img-rounded prof_icon slobodan_simic_icon"></span>
+
+                        <div class="caption">
+                            <div class="name">Slobodan Simic</div>
+                            <div class="subject">Mathematics</div>
+                            <div class="quote">&ldquo;Nowadays, colleagues tell me that their students always ask, 'Are we going to use Piazza?' It's sort of an expected thing now.&rdquo;</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="prof_brief col-md-3 col-sm-6">
+                    <a href="/professors#paul_hegarty" class="thumbnail log_click" data-log-click="prof_paul_hegarty">
+                        <span class="img-rounded prof_icon paul_hegarty_icon"></span>
+
+                        <div class="caption">
+                            <div class="name">Paul Hegarty</div>
+                            <div class="subject">Computer Science</div>
+                            <div class="quote">&ldquo;In the last few years, Piazza has replaced my entire website.&rdquo;</div>
+                        </div>
+                    </a>
+                </div>-->
+    <br><br>
+    <span class="divider"></span>
+    <div class="row">
+        <section class="pv-40 clearfix">
+            <div class="container">
+                <h3 class="" style="text-align: center"><strong>Sign Up</strong> Now</h3>
+                <p class="" style="text-align: center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Repellendus, facere <br> perspiciatis perferendis. Fuga nesciunt quaerat, dignissimos quasi delectus
+                    hic commodi sed <br> veritatis tenetur aperiam blanditiis optio praesentium!</p>
+                <!-- pricing tables start -->
+                <!-- ================ -->
+                <div class="pricing-tables circle-head object-non-visible animated object-visible fadeInUpSmall"
+                     data-animation-effect="fadeInUpSmall" data-effect-delay="0">
+                    <div class="row grid-space-10">
+                        <div class="col-sm-3">
+                            <!-- pricing table start -->
+                            <!-- ================ -->
+                            <div class="plan shadow light-gray-bg bordered">
+                                <div class="header dark-bg">
+                                    <h3>Basic</h3>
+                                    <div class="price"><span>Free</span></div>
+                                </div>
+                                <ul class="shadow light-gray-bg">
+                                    <li>1 User</li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right"
+                                           data-content="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                           title="" data-original-title="15GB Storage" data-trigger="hover">1GB
+                                            Storage</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right"
+                                           data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                           title="" data-original-title="15 Email Acounts">1 Email Acounts</a>
+                                    </li>
+                                    <li>Subdomains</li>
+                                    <li>Security</li>
+                                    <li>Bandwidth</li>
+                                    <li>Databases</li>
+                                    <li><a class="btn btn-dark btn-animated radius-50">Subscribe <i
+                                            class="fa fa-user"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- pricing table end -->
+                        </div>
+                        <div class="col-sm-3">
+                            <!-- pricing table start -->
+                            <!-- ================ -->
+                            <div class="plan shadow light-gray-bg bordered">
+                                <div class="header dark-bg">
+                                    <h3>Premium</h3>
+                                    <div class="price"><span>$19.99</span>/m.</div>
+                                </div>
+                                <ul class="shadow light-gray-bg">
+                                    <li>80 Users</li>
+                                    <li>Unlimited Disk Space</li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right"
+                                           data-content="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                           title="" data-original-title="Unlimited Subdomains">Unlimited Email
+                                            Acounts</a>
+                                    </li>
+                                    <li>Subdomains</li>
+                                    <li>Security</li>
+                                    <li>500 Visitors per month</li>
+                                    <li>1 Database</li>
+                                    <li><a class="btn btn-dark btn-animated radius-50">Add to cart <i
+                                            class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- pricing table end -->
+                        </div>
+                        <div class="col-sm-3">
+                            <!-- pricing table start -->
+                            <!-- ================ -->
+                            <div class="plan shadow light-gray-bg bordered best-value">
+                                <div class="header default-bg">
+                                    <h3>Pro</h3>
+                                    <div class="price"><span>$24.99</span>/m.</div>
+                                </div>
+                                <ul class="shadow light-gray-bg">
+                                    <li>Unlimited Users</li>
+                                    <li>Unlimited Disk Space</li>
+                                    <li>Unlimited Email Acounts</li>
+                                    <li>Unlimited Subdomains</li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right"
+                                           data-content="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                           title="" data-original-title="Enchaned Security">Enchaned Security</a>
+                                    </li>
+                                    <li>Unlimited Bandwidth</li>
+                                    <li>Unlimited Databases</li>
+                                    <li><a class="btn btn-default btn-animated radius-50">Add to cart <i
+                                            class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- pricing table end -->
+                        </div>
+                        <div class="col-sm-3">
+                            <!-- pricing table start -->
+                            <!-- ================ -->
+                            <div class="plan shadow light-gray-bg bordered">
+                                <div class="header dark-bg">
+                                    <h3>Ultimate</h3>
+                                    <div class="price"><span>$45.99</span>/m.</div>
+                                </div>
+                                <ul class="shadow light-gray-bg">
+                                    <li>Unlimited Users</li>
+                                    <li>Unlimited Disk Space</li>
+                                    <li>Unlimited Email Acounts</li>
+                                    <li>Unlimited Subdomains</li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right"
+                                           data-content="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                           title="" data-original-title="Enchaned Security">Enchaned Security</a>
+                                    </li>
+                                    <li>Unlimited Bandwidth</li>
+                                    <li>Unlimited Databases</li>
+                                    <li><a class="btn btn-dark btn-animated radius-50">Add to cart <i
+                                            class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- pricing table end -->
+                        </div>
+                    </div>
+                </div>
+                <!-- pricing tables end -->
+            </div>
+        </section>
+    </div>
+    <br><br>
