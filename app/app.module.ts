@@ -28,7 +28,7 @@ import {DashboardService} from "./dashboard/dashboard.service";
     AppHeaderComponent,
     DashboardComponent,
     IntervieweeComponent,
-    TopicComponent,
+    TopicComponent
   ],
   providers: [
     AdminService,
