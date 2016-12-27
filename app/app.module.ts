@@ -13,13 +13,15 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { AppRoutingModule }     from './app-routing.module';
 import {AdminService} from "./admin/admin.service";
 import {TopicComponent} from "./admin/topic/topic.component";
+import {DashboardService} from "./dashboard/dashboard.service";
 
 @NgModule({
   imports:      [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule.forRoot()
   ],
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import {TopicComponent} from "./admin/topic/topic.component";
     TopicComponent,
   ],
   providers: [
-    AdminService
+    AdminService,
+    DashboardService
   ],
   bootstrap:    [ AppComponent ]
 })
