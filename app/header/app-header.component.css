@@ -113,26 +113,28 @@ body {
     border: solid 1px transparent;
     color: #FFF;
 }
+
 .loginRegister .btn-xs.flat {
     padding: 0;
 }
-    .loginRegister .btn-xs {
-        background: #8a8a8c;
-        border: solid 1px #8a8a8c;
-        color: #fff;
-        cursor: pointer;
-        display: inline-block;
-        font-size: .875rem;
-        font-weight: 500;
-        line-height: 1.875rem;
-        margin-left: 1.0rem;
-        padding: 0rem 1.5rem;
-        position: relative;
-        text-align: center;
-        text-decoration: none;
-        white-space: nowrap;
-        -webkit-appearance: none;
-        transition: background 300ms ease-out;
-        border-radius: 2px;
-        box-sizing: border-box;
-    }
+
+.loginRegister .btn-xs {
+    background: #8a8a8c;
+    border: solid 1px #8a8a8c;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    margin-left: 1.0rem;
+    padding: 0rem 1.5rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    transition: background 300ms ease-out;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
