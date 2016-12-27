@@ -14,7 +14,7 @@ import {DashboardService} from "./dashboard.service";
   styleUrls: ['dashboard.component.css']
 })
 export class DashboardComponent implements OnInit{
-  searchLabel: String = 'Search';
+  searchLabel: String =;
   searchTypes: SearchType[];
   selectedSearchType: SearchType;
   @Input()
@@ -25,6 +25,10 @@ export class DashboardComponent implements OnInit{
   ngOnInit():void {
       this.getSearchTypes();
   }
+    ngOnInit():void {
+        this.searchLabel = 'Search';
+        this.getSearchTypes();
+    }
 
   getSearchTypes():void {
       // TODO: Move this to a service call.
