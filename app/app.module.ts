@@ -2,18 +2,11 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
-
 import { NgbModule }     from '@ng-bootstrap/ng-bootstrap';
 
+/* App Components */
 import { AppComponent }  from './app.component';
-import { IntervieweeComponent } from './interviewee/interviewee.component';
-import { AppHeaderComponent } from "./header/app-header.component";
-import { DashboardComponent } from "./dashboard/dashboard.component";
-
-import { AppRoutingModule }     from './app-routing.module';
-import {AdminService} from "./admin/admin.service";
-import {TopicComponent} from "./admin/topic/topic.component";
-import {DashboardService} from "./dashboard/dashboard.service";
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 /* Logging
 *
@@ -47,10 +40,7 @@ import { LOG_LOGGER_PROVIDERS } from "angular2-logger/core"; // Level 5
   ],
   declarations: [
     AppComponent,
-    AppHeaderComponent,
-    DashboardComponent,
-    IntervieweeComponent,
-    TopicComponent
+    routingComponents
   ],
   providers: [
     /*Logger,
@@ -59,9 +49,7 @@ import { LOG_LOGGER_PROVIDERS } from "angular2-logger/core"; // Level 5
       ERROR_LOGGER_PROVIDERS,
       WARN_LOGGER_PROVIDERS,
       INFO_LOGGER_PROVIDERS,*/
-      LOG_LOGGER_PROVIDERS,
-      AdminService,
-      DashboardService
+      LOG_LOGGER_PROVIDERS
   ],
   bootstrap:    [ AppComponent ]
 })
