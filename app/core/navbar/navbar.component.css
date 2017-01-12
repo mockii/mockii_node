@@ -1,0 +1,47 @@
+/*Apply when screen resolution exceeds 575px*/
+@media (min-width: 576px) {
+    .header-nav {
+        margin-top: -20px;
+        margin-left: 300px;
+    }
+}
+
+/*Apply when screen resolution is below 575px*/
+@media (max-width: 991px) {
+    .navbar-toggleable-md .navbar-brand {
+        margin-top: auto;
+    }
+    .navbar-toggler {
+        background-image: none;
+        border: solid 1px silver;
+        border-radius: 2px;
+        color: #eee;
+    }
+    .header-nav ul a {
+        padding: 15px 10px;
+        border-bottom: 1px solid #fcfcfc;
+        width: 85%;
+    }
+}
+
+/*Apply when screen resolution is exceeds 575px and is below 991px*/
+@media (min-width: 576px) and (max-width: 991px) {
+    .navbar-toggleable-md .navbar-nav .nav-item {
+         float: left;
+         margin-left: 15px;
+    }
+    .header-nav {
+        margin-top: -65px;
+        margin-left: 25px;
+        width: 100%;
+        bottom-border: none;
+    }
+    @media (max-width: 991px) {
+        .header-nav ul a {
+            padding: 10px;
+            border-bottom: 0;
+            width: 85%;
+        }
+    }
+}
+

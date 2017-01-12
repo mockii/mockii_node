@@ -1,60 +1,20 @@
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes, RouterLink, RouterLinkActive, RouterOutlet, RouterOutletMap} from '@angular/router';
+import { RouterModule, Routes, PreloadAllModules, NoPreloading } from '@angular/router';
 
-import { AppHeaderRoutingConfig } from 'app/navbar/header/app-header-routes.config';
+import { PreloadModulesStrategy } from './core/strategies/preload-modules.strategy';
 
-import { AppHeaderComponent } from "app/navbar/header/app-header.component";
-import { DashboardComponent } from "app/dashboard/dashboard.component";
-import { IntervieweeComponent } from 'app/interviewee/interviewee.component';
-import { InterviewerComponent } from 'app/interviewer/interviewer.component';
-import { RecruiterComponent } from 'app/recruiter/recruiter.component';
-import { AdminComponent } from 'app/admin/admin.component';
-import { TopicComponent } from "app/admin/topic/topic.component";
+const app_routes: Routes = [
 
-import { AdminService } from "./admin/admin.service";
-import { DashboardService } from "./dashboard/dashboard.service";
-
-const routes: Routes = [
-  { path: '', title: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', title: 'Home', component: DashboardComponent },
-  { path: 'interviewee',  title: 'Interviewee', component: IntervieweeComponent },
-  { path: 'interviewer',  title: 'Interviewer', component: InterviewerComponent },
-  { path: 'recruiter',  title: 'Recruiter', component: RecruiterComponent },
-  { path: 'admin',  title: 'Admin', component: AdminComponent }
-  // { path: 'topic',     component: TopicComponent },
+    { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
+    { path: 'interviewee', loadChildren: 'app/interviewee/interviewee.module#IntervieweeModule' },
+    { path: 'interviewer', loadChildren: 'app/interviewer/interviewer.module#InterviewerModule' },
+    { path: 'recruiter', loadChildren: 'app/recruiter/recruiter.module#RecruiterModule' },
+    { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule' },
+    { path: '**', pathMatch:'full', redirectTo: '/dashboard' } //catch any unfound routes and redirect to home page
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot( routes ) ],
-  // declerations: [
-  //     ROUTES,
-  //     RouterOutlet
-  // ],
-  providers: [
-      AdminService,
-      DashboardService,
-      RouterOutletMap
-  ],
-  exports: [ RouterModule ]
+    imports: [ RouterModule.forRoot(app_routes, { preloadingStrategy: PreloadAllModules }) ],
+    exports: [ RouterModule ]
 })
-
-export class AppRoutingModule {
-    // routes: RouteInfo[];
-    // routingComponents: [];
-    //
-    // constructor(private routeConfig: AppHeaderRoutingConfig){
-    //     this.routes = routeConfig.ROUTES;
-    //     this.routingComponents = routeConfig.ROUTING_COMPONENTS;
-    // }
-}
-
-// export const routingComponents = routingComponents;
-export const routingComponents = [
-    AppHeaderComponent,
-    DashboardComponent,
-    IntervieweeComponent,
-    InterviewerComponent,
-    RecruiterComponent,
-    AdminComponent,
-    TopicComponent
-];
+export class AppRoutingModule { }

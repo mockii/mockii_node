@@ -6,7 +6,11 @@ import { NgbModule }     from '@ng-bootstrap/ng-bootstrap';
 
 /* App Components */
 import { AppComponent }  from './app.component';
-import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+
+import { LoginModule } from './login/login.module';
+import { CoreModule }   from './core/core.module';
+import { SharedModule }   from './shared/shared.module';
 
 /* Logging
 *
@@ -35,12 +39,14 @@ import { LOG_LOGGER_PROVIDERS } from "angular2-logger/core"; // Level 5
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
-    NgbModule.forRoot()
+    AppRoutingModule,     //Main routes for application
+    NgbModule.forRoot(),
+    LoginModule,          //Eager loaded since we may need to go here right away as browser loads based on route user enters
+    CoreModule,           //Singleton objects (services, components that are loaded only once, etc.)
+    SharedModule          //Shared (multi-instance) objects
   ],
   declarations: [
-    AppComponent,
-    routingComponents
+    AppComponent
   ],
   providers: [
     /*Logger,
