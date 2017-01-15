@@ -1,15 +1,48 @@
-/*Apply when screen resolution exceeds 575px*/
-@media (min-width: 576px) {
+/*Apply when screen resolution exceeds 770px*/
+@media (min-width: 770px) {
     .header-nav {
-        margin-top: -20px;
-        margin-left: 300px;
+        margin-top: -40px;
+        float: right;
+    }
+    .collapse {
+          display: block;
+     }
+    .navbar-toggleable-md .navbar-nav {
+        float: left;
+        height: 0;
+        margin-right: 25px;
+        margin-top: 0;
+    }
+    .navbar-toggleable-md .navbar-nav .nav-item {
+        float: left;
+        margin-left: 15px;
+    }
+    .access {
+        float: right;
     }
 }
-
-/*Apply when screen resolution is below 575px*/
+/*Apply when screen resolution exceeds 991px*/
+@media (min-width: 991px) {
+    .header-nav {
+        /*margin-top: auto;*/
+        margin-top: 3px;
+    }
+}
 @media (max-width: 991px) {
     .navbar-toggleable-md .navbar-brand {
-        margin-top: auto;
+        margin-top: 0px;
+    }
+}
+/*Apply when screen resolution is below 770px*/
+@media (max-width: 770px) {
+    .header-nav {
+        margin-left: 25px;
+        width: 100%;
+    }
+    .header-nav ul a {
+        padding: 15px 10px;
+        border-bottom: 1px solid #fcfcfc;
+        width: 85%;
     }
     .navbar-toggler {
         background-image: none;
@@ -17,31 +50,30 @@
         border-radius: 2px;
         color: #eee;
     }
-    .header-nav ul a {
-        padding: 15px 10px;
-        border-bottom: 1px solid #fcfcfc;
-        width: 85%;
+    .access {
+        width: 50%;
+        margin: auto;
+        text-align: center;
     }
 }
-
-/*Apply when screen resolution is exceeds 575px and is below 991px*/
-@media (min-width: 576px) and (max-width: 991px) {
-    .navbar-toggleable-md .navbar-nav .nav-item {
-         float: left;
-         margin-left: 15px;
-    }
-    .header-nav {
-        margin-top: -65px;
-        margin-left: 25px;
-        width: 100%;
-        bottom-border: none;
-    }
-    @media (max-width: 991px) {
-        .header-nav ul a {
-            padding: 10px;
-            border-bottom: 0;
-            width: 85%;
-        }
+/*Apply when screen resolution is below 381px*/
+@media (max-width: 381px) {
+    .access {
+        width: 65%;
+        margin: auto;
     }
 }
-
+.btn-outline-success:focus {
+    outline: 0;
+}
+.btn-outline-success:hover {
+    background-color: red;
+    border-color: rgba(0,0,0,.5);
+    outline: 0;
+}
+.btn-outline-success {
+    color: white;
+    border-color: rgba(0,0,0,.075);
+    background-color: transparent;
+    transition: all .5s;
+}

@@ -14,7 +14,7 @@
 
 @media (max-width: 1450px) {
     ul.dropdown-menu {
-        left: -150px;
+        left: -65px;
     }
 }
 
@@ -561,4 +561,8 @@ fieldset[disabled] .form-control {
 
 .form-group {
     margin-bottom: 3rem;
+}
+
+.input-group-btn:not(:first-child)>.btn:focus, .input-group-btn:not(:first-child)>.btn:hover {
+    outline: 0;
 }

@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit{
     constructor(private modalService: NgbModal, private dashboardService: DashboardService) {}
 
     ngOnInit():void {
-        this.searchLabel = 'Search';
+        this.searchLabel = 'Search Interviewer';
         this.getSearchTypes();
     }
 
@@ -32,28 +32,24 @@ export class DashboardComponent implements OnInit{
         // TODO: Move this to a service call.
         this.searchTypes = [
             {
-                searchClass: 'glyphicon glyphicon-user',
-                searchType: 'Search by User'
+                searchClass: 'glyphicon glyphicon-book',
+                searchType: '... By Location'
             },
             {
                 searchClass: 'glyphicon glyphicon-book',
-                searchType: 'Search By Location'
+                searchType: '... By Technology'
             },
             {
                 searchClass: 'glyphicon glyphicon-book',
-                searchType: 'Search by Technology'
+                searchType: '... By Topic'
             },
             {
                 searchClass: 'glyphicon glyphicon-book',
-                searchType: 'Search by Topic'
+                searchType: '... By Occupation'
             },
             {
                 searchClass: 'glyphicon glyphicon-book',
-                searchType: 'Search by Occupation'
-            },
-            {
-                searchClass: 'glyphicon glyphicon-book',
-                searchType: 'Search by Occupation Category'
+                searchType: '... By Occupation Category'
             }
         ]
     }
