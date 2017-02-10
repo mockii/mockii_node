@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginComponent } from './login.component';
+import { SearchComponent } from './search.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent }
+  { path: '', component: SearchComponent }
 ];
 
 @NgModule({
   imports: [ RouterModule.forChild(routes) ],
   exports: [ RouterModule ]
 })
-export class LoginRoutingModule { 
-  static components = [ LoginComponent ];
+export class SearchRoutingModule { 
+  static components = [ SearchComponent ];
 }

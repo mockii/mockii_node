@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import { NgbModule }     from '@ng-bootstrap/ng-bootstrap';
+import { AUTH_PROVIDERS }      from 'angular2-jwt';
 
 /* App Components */
 import { AppComponent }  from './app.component';
@@ -55,7 +56,8 @@ import { LOG_LOGGER_PROVIDERS } from "angular2-logger/core"; // Level 5
       ERROR_LOGGER_PROVIDERS,
       WARN_LOGGER_PROVIDERS,
       INFO_LOGGER_PROVIDERS,*/
-      LOG_LOGGER_PROVIDERS
+      LOG_LOGGER_PROVIDERS,
+      AUTH_PROVIDERS
   ],
   bootstrap:    [ AppComponent ]
 })

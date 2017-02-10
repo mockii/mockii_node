@@ -1,0 +1,42 @@
+<nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-dark bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right hidden-md-up" type="button" (click)="isCollapsed = !isCollapsed"
+            data-toggle="isCollapsed = !isCollapsed" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="isCollapsed" aria-label="Toggle navigation">
+            {{menuIcon}}
+    </button>
+    <a class="navbar-brand" routerLink="/home">
+        <img src="assets/M_logo.png"  style="width: 30px;" alt="logo"/>
+    </a>
+    <div class="form-group has-search search" [style.font-family]="searchFont">
+        <input class="form-control searchInput mr-sm-2" placeholder="Get mockii'ed today..." type="text"
+               [ngModel]="searchModel" (ngModelChange)="searchMockiiChange($event)" (keypress)="searchMockiiOnEnter($event)">
+        <i class="fa fa-search form-control-search"></i>
+    </div>
+    <!--<form class="search">
+        <input class="form-control mr-sm-2" type="text" placeholder="Get interviewed today...">
+        &lt;!&ndash;<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>&ndash;&gt;
+    </form>-->
+
+    <div class="navbar-toggleable-md navbar-collapse header-nav" id="bd-main-nav" [attr.aria-expanded]="!isCollapsed" [ngClass]="{collapse: isCollapsed}">
+        <ul class="navbar-nav mt-md-2">
+            <li (click)="navigateTo()" class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/home">Home<span class="sr-only">(current)</span></a></li>
+            <li (click)="navigateTo()" class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/interviewer">Interviewer</a></li>
+            <li (click)="navigateTo()" class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/interviewee">Interviewee</a></li>
+            <li (click)="navigateTo()" class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/recruiter">Recruiter</a></li>
+            <li (click)="navigateTo()" class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/admin">Admin</a></li>
+
+            <!--Test URLS Here-->
+
+            <!--<li (click)="navigateTo()" class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/dashboard">Dashboard</a></li>-->
+            <!--<li (click)="navigateTo()" class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/search">Search</a></li>-->
+            <!--<li (click)="navigateTo()" class="nav-item" routerLinkActive="active" (click)="loginOrOut()"><a>{{ loginLogoutText }}</a></li>-->
+        </ul>
+        <!--<form class="form-inline my-lg-0 access">
+            <button class="btn btn-outline-success my-sm-0 login" type="button" (click)="loginOrOut()">Login</button>
+            <button class="btn btn-outline-success my-sm-0 signup" type="button">Sign Up</button>
+        </form>-->
+        <form class="form-inline my-lg-0 access">
+            <button class="btn btn-outline-success my-sm-0 login" type="button" (click)="loginOrOut()">{{ loginLogoutText }}</button>
+            <!--<button class="btn btn-primary btn-margin" (click)="authService.logout()" *ngIf="authService.authenticated()">Log Out</button>-->
+        </form>
+    </div>
+</nav>

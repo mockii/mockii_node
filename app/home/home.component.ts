@@ -5,16 +5,15 @@ import {Component, OnInit, Input} from '@angular/core';
 import {SearchType} from "../model/SearchType";
 import {NgbModal, ModalDismissReasons} from "@ng-bootstrap/ng-bootstrap";
 import {UserProfile} from "../model/UserProfile";
-import {DashboardService} from "./dashboard.service";
-import {AuthService} from "../core/services/auth.service";
+import {HomeService} from "./home.service";
 
 @Component({
     moduleId: module.id,
-    selector: 'app-dashboard',
-    templateUrl: 'dashboard.component.html',
-    styleUrls: ['dashboard.component.css']
+    selector: 'app-home',
+    templateUrl: 'home.component.html',
+    styleUrls: ['home.component.css']
 })
-export class DashboardComponent implements OnInit{
+export class HomeComponent implements OnInit{
     searchLabel: String;
     searchTypes: SearchType[];
     selectedSearchType: SearchType;
@@ -22,9 +21,7 @@ export class DashboardComponent implements OnInit{
     @Input()
     userProfile: UserProfile = new UserProfile();
 
-    constructor(private modalService: NgbModal,
-                private dashboardService: DashboardService,
-                private authService:AuthService) {}
+    constructor(private modalService: NgbModal, private homeService: HomeService) {}
 
     ngOnInit():void {
         this.searchLabel = 'Search Interviewer';
@@ -66,7 +63,7 @@ export class DashboardComponent implements OnInit{
 
     open(content: any) {
         this.modalService.open(content).result.then((result) => {
-            this.dashboardService.create(this.userProfile);
+            this.homeService.create(this.userProfile);
             window.alert('Successfully created user :'+this.userProfile.firstName);
         }, (reason) => {
             this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
