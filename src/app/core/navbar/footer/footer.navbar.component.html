@@ -1,0 +1,119 @@
+<div class="w-footer">
+    <div class="grid-container">
+        <div class="link-lists">
+            <div class="list-column">
+                <div class="row">
+                    <div class="col-xs-6 col-md-12 logo">
+                        <a class="" routerLink="/home">
+                            <img src="assets/M_logo.png" style="width: 50px;" alt="logo"/>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-12">
+                        <div class="form-group" data-header="Select a Language">
+                            <select class="selectpicker form-control" data-width="auto" data-live-search="true" [(ngModel)]="selectedLanguage"
+                                    (ngModelChange)="updateSelectedLanguage($event)">
+                                <option *ngFor="let language of languageOptions" [ngValue]="language" data-subtext="Heinz" data-icon="glyphicon-heart">{{language.languageName}}</option>
+                            </select>
+                            <span class="arrow"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.291 4.295a1 1 0 1 1 1.414 1.415l-8 7.995a1 1 0 0 1-1.414 0l-8-7.995a1 1 0 1 1 1.414-1.415l7.293 7.29 7.293-7.29z"></path>
+                                        </svg>
+                                        </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-12">
+                        <div class="form-group selectContainer" data-header="Select a Currency">
+                            <select class="selectpicker form-control" data-width="auto" data-live-search="true" [(ngModel)]="selectedCurrency"
+                                    (ngModelChange)="updateSelectedCurrency($event)">
+                                <option *ngFor="let currency of currencyOptions" [ngValue]="currency" data-subtext="Heinz" data-icon="glyphicon-heart">{{currency.currencyValue}}</option>
+                            </select>
+                            <span class="arrow"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.291 4.295a1 1 0 1 1 1.414 1.415l-8 7.995a1 1 0 0 1-1.414 0l-8-7.995a1 1 0 1 1 1.414-1.415l7.293 7.29 7.293-7.29z"></path>
+                                        </svg>
+                                        </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="list-column">
+                <h3>Our Community
+                    <div class="expandCollapse">
+                        <span data-toggle="collapse" class="arrow-toggle collapsed" data-target="#community">
+                            <span class="icon-chevron-up"></span>
+                            <span class="icon-chevron-down"></span>
+                        </span>
+                    </div>
+                </h3>
+                <div id="community" class="panel-collapse collapse">
+                    <div class="list-group">
+                        <a href="/diversity">Diversity</a>
+                        <a href="/why-mockii">Why Mockii</a><!--Satisfaction&ndash-->
+                        <a href="/referrals">Referals</a>
+                        <a href="/professionals">Professionals</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-column">
+                <h3>We Care
+                    <div class="expandCollapse">
+                        <span data-toggle="collapse" class="arrow-toggle collapsed" data-target="#weCare">
+                            <span class="icon-chevron-up"></span>
+                            <span class="icon-chevron-down"></span>
+                        </span>
+                    </div>
+                </h3>
+                <div id="weCare" class="panel-collapse collapse">
+                    <div class="list-group">
+                        <a href="/contact-us">Contact Us</a>
+                        <a href="/endless-faqs">Endless FAQs</a>
+                        <a href="/refunds">Refunds</a>
+                        <a href="/payments">Payments & Taxes</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-column">
+                <h3>Mockii
+                    <div class="expandCollapse">
+                        <span data-toggle="collapse" class="arrow-toggle collapsed" data-target="#mockii">
+                            <span class="icon-chevron-up"></span>
+                            <span class="icon-chevron-down"></span>
+                        </span>
+                    </div>
+                </h3>
+                <div id="mockii" class="panel-collapse collapse">
+                    <div class="list-group">
+                        <a href="/about-us">About Us</a>
+                        <a href="/careers">Careers</a>
+                        <!--<a href="/press-room" style="opacity: 1;">Press Room</a>-->
+                        <a href="/terms-of-use">Terms of Use</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <!--<a href="/technology" style="opacity: 1;">Technology</a>-->
+                        <!--<a href="/international" style="opacity: 1;">International</a>-->
+                        <!--<a href="/affiliates" style="opacity: 1;">Affiliates</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-wrapper">
+            <p>Subscribe to our newsletter for weekly updates</p>
+            <form method="post" class="form-inline" action="/subscribe">
+                <div class="form-group">
+                    <input type="email" class="form-control subscribeInput" placeholder="jane.doe@example.com">
+                </div>
+                <button type="submit" class="btn btn-outline-success my-sm-0 subscribeButton">Subscribe</button>
+            </form>
+        </div>
+        <div class="w-country-copyright">
+            <span class="copyright-proper">
+              © Copyright 2017 Ark Innovations, Llc. All rights reserved.
+            </span>
+        </div>
+    </div>
+</div>
