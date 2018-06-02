@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterContentInit, Input, 
          ContentChildren, ElementRef, QueryList, ChangeDetectionStrategy } from '@angular/core';
 
-import { } from '@types/googlemaps';
+import { } from 'googlemaps';
 import 'rxjs/add/operator/debounceTime';
 
 import { MapPointComponent } from './mapPoint.component';
