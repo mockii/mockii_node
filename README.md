@@ -29,3 +29,44 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Debugging
+
+npm start
+
+or
+
+ng serve
+
+Place breakpoints & Debug Mockii
+
+https://blog.jetbrains.com/webstorm/2017/01/debugging-angular-apps/
+
+## Mockii Login / SignUp
+
+auth0.com
+username: mockii
+password: login with mockii github
+
+// mockii.auth0.com
+
+## Update NPM
+
+npm -i -g npm
+
+## Update angular-cli
+
+npm -i -g angular-cli@latest
+
+## Update all packages from package.json
+
+npm i -g npm-check-updates
+
+ncu -u
+
+npm install
+
+## Check Error logs
+
+https://stackoverflow.com/questions/46809626/angular-no-module-factory-available-for-dependency-type-contextelementdependenc
